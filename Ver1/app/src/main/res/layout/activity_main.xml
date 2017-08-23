@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vino.ver1.MainActivity"
+    android:background="@drawable/img1"
+    android:orientation="vertical"
+    android:paddingTop="100sp"
+    >
+
+
+    <TextView
+        android:id="@+id/txt"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="TextView"
+        android:textAllCaps="true"
+        android:paddingLeft="30sp"
+        android:textSize="30sp"
+        android:fontFamily="serif"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="100dp">
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="74dp"
+        android:layout_height="78dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/butoon"
+        android:textAlignment="center"
+        android:paddingTop="120dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#6e6c6c"
+        android:text="Get Started"
+        android:textSize="20sp"
+        /></LinearLayout>
+
+</LinearLayout>
