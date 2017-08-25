@@ -46,7 +46,7 @@ public class Adapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public Object getChild(int i, int i1)
+    public  Object getChild(int i, int i1)
     {
 
         return listHashMap.get(list.get(i)).get(i1);
@@ -86,35 +86,36 @@ public class Adapter extends BaseExpandableListAdapter {
         if(title=="Java")
         {
             img.setImageResource(R.drawable.java);
-        }else if(title=="Android")
-        {
-            img.setImageResource(R.drawable.android);
         }else if(title=="Ios")
         {
             img.setImageResource(R.drawable.apple);
-        }else if(title=="Swift")
-        {
-            img.setImageResource(R.drawable.hai);
-        }else if(title=="Kotlin")
-        {
-            img.setImageResource(R.drawable.kotlin);
         }
 
         return view;
     }
 
     @Override
-    public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup)
-    {
+    public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
 
-        final String childText =(String)getChild(i,i1);
-        if(view==null)
-        {
-            LayoutInflater inflater=(LayoutInflater)this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view=inflater.inflate(R.layout.content,null);
+        final String childText = (String) getChild(i, i1);
+        if (view == null) {
+            LayoutInflater inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            view = inflater.inflate(R.layout.content, null);
         }
-        TextView txtListChild =(TextView)view.findViewById(R.id.txtChild);
+        TextView txtListChild = (TextView) view.findViewById(R.id.txtChild);
         txtListChild.setText(childText);
+        ImageView img = (ImageView) view.findViewById(R.id.childImg);
+
+        if (childText == "Android") {
+            img.setImageResource(R.drawable.android);
+        } else if (childText == "Kotlin") {
+            img.setImageResource(R.drawable.kotlin);
+        } else if (childText == "Swift") {
+            img.setImageResource(R.drawable.hai);
+        } else if (childText =="Objective C"){
+            img.setImageResource(R.drawable.objective_c);
+        }
+
         return view;
     }
 
@@ -123,4 +124,7 @@ public class Adapter extends BaseExpandableListAdapter {
 
         return true;
     }
+
+
+
 }
