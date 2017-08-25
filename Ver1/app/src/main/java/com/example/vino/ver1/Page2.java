@@ -38,6 +38,35 @@ public class Page2 extends AppCompatActivity {
         listAdapter = new Adapter(this, list, listHashMap);
         listView.setAdapter(listAdapter);
 
+        listView.setOnChildClickListener(new OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int i, int i2, long id) {
+
+                 final String string=listHashMap.get(list.get(i)).get(i2);
+                Intent intent;
+                switch(string) {
+                    case "Android":
+                        intent = new Intent(Page2.this, Android.class);
+                        startActivity(intent);
+                        break;
+                    case "Kotlin":
+                        intent = new Intent(Page2.this, Kotlin.class);
+                        startActivity(intent);
+                        break;
+                    case "Objective C":
+                        intent = new Intent(Page2.this, Objective.class);
+                        startActivity(intent);
+                        break;
+                    case "Swift":
+                        intent = new Intent(Page2.this, Swift.class);
+                        startActivity(intent);
+                        break;
+
+                }
+                return true;
+            }
+        });
+
 
     }
 

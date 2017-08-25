@@ -19,6 +19,11 @@
         </activity>
 
         <activity android:name=".Page2"></activity>
+        <activity android:name=".Android"></activity>
+        <activity android:name=".Swift"></activity>
+        <activity android:name=".Kotlin"></activity>
+        <activity android:name=".Objective"></activity>
+
 
     </application>
 
